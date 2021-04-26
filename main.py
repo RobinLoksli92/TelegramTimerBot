@@ -1,7 +1,10 @@
 import ptbot
 import os
 from pytimeparse import parse
+from dotenv import load_dotenv
 
+
+load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
 CHAT_ID = '619160718'  
@@ -43,5 +46,6 @@ def main(reply):
 
 
 if __name__ == '__main__':
+    load_dotenv()
     bot = ptbot.Bot(TOKEN)
     main(reply)
